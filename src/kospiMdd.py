@@ -3,14 +3,12 @@
 :ref : https://github.com/INVESTAR/StockAnalysisInPython/blob/master/03_NumPy_and_Pandas/ch03_01_KOSPI_MDD.py
 """
 
-import enum
 import yfinance as yf
 import matplotlib.pyplot as plt
 import argparse
 
-class MarketTicker(enum.Enum):
-    KOSPI = '^KS11'
-    KOSDAQ = '^KQ11'
+from common.ticker import MarketTicker
+
 
 class MDD:
     
