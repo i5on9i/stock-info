@@ -19,8 +19,8 @@ class MDD:
         self.ticker = ticker
         self.start_date = start_date
         self.end_date = end_date
-        self.kospi = yf.download(MarketTicker.KOSPI.value, start=start_date, end=end_date)
-        self.kosdaq = yf.download(MarketTicker.KOSDAQ.value, start=start_date, end=end_date)
+        self.kospi = yf.download(MarketTicker.KOSPI.value, start=start_date, end=end_date, auto_adjust = False)
+        self.kosdaq = yf.download(MarketTicker.KOSDAQ.value, start=start_date, end=end_date, auto_adjust = False)
 
     @property
     def window(self):
